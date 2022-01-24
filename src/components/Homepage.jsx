@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import millify from 'millify';
 import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
@@ -19,12 +19,6 @@ const Homepage = () => {
     AOS.init({
         easing: "ease-out-cubic",
     });
-  /*  useEffect(() => {
-        AOS.init({
-            easing: "ease-out-cubic",
-            duration: 1200,
-        });
-    }, []);*/
 
     return (
         <>

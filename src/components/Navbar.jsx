@@ -21,7 +21,6 @@ const Navbar = () => {
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-
     useEffect(() => {
         if (screenSize <= 800) {
             setActiveMenu(false);
