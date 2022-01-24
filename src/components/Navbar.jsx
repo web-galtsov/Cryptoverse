@@ -23,7 +23,7 @@ const Navbar = () => {
 
     useEffect(() => {
         if (screenSize <= 800) {
-            setActiveMenu(false);
+            setActiveMenu(true);
         } else {
             setActiveMenu(true);
         }
@@ -39,7 +39,7 @@ const Navbar = () => {
                     {click ? <CloseOutlined /> :  <MenuOutlined />}
                 </Button>
             </div>
-
+            {activeMenu && (
                 <Menu theme="dark" className={click ? " nav-menu click" : "nav-menu"}>
                     <Menu.Item icon={<HomeOutlined />} onClick={closeMobileMenu}  key="1">
                         <Link to="/"> Home </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         <Link to="/news" >News</Link>
                     </Menu.Item>
                 </Menu>
-
+            )}
         </div>
     );
 };
