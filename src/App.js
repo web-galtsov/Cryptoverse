@@ -4,7 +4,6 @@ import { Layout, Typography, Space } from 'antd';
 import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
 import './App.css';
 
-
 const App = () => {
     const [date, setDate] = useState();
     const getYear = () => setDate(new Date().getFullYear());
