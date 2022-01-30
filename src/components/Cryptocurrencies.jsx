@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
-
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
@@ -14,9 +13,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
     useEffect(() => {
         setCryptos(cryptosList?.data?.coins);
-
         const filteredData = cryptosList?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm));
-
         setCryptos(filteredData);
     }, [cryptosList, searchTerm]);
 
@@ -40,10 +37,7 @@ const Cryptocurrencies = ({ simplified }) => {
                         lg={6}
                         className="crypto-card"
                         key={currency.uuid}
-                    /*    data-aos="fade-up"*/
                     >
-
-                        {/* Note: Change currency.id to currency.uuid  */}
                         <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
                             <Card
                                 title={`${currency.rank}. ${currency.name}`}

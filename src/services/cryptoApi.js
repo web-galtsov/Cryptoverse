@@ -4,6 +4,8 @@ const cryptoApiHeaders = {
     'x-rapidapi-host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST,
     'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
 };
+
+
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
 export const cryptoApi = createApi({
@@ -23,10 +25,11 @@ export const cryptoApi = createApi({
         }),
         // Note: To access this endpoint you need premium plan
         getExchanges: builder.query({
-            query: () => createRequest('/exchanges'),
+            query: (uuid) => createRequest(`coin/Qwsogvtv82FCd/exchanges`),
         }),
     }),
 });
+
 
 export const {
     useGetCryptosQuery,
@@ -34,3 +37,4 @@ export const {
     useGetCryptoHistoryQuery,
     useGetExchangesQuery
 } = cryptoApi;
+

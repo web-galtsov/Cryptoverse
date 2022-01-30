@@ -30,8 +30,6 @@ const Homepage = () => {
                 <Col xs={24} sm={12} lg={8}><Statistic title="Total 24h Volume" value={`$${millify(globalStats.total24hVolume)}`} /></Col>
                 <Col xs={24} sm={12} lg={8}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
                 <Col xs={24} sm={12} lg={8}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} /></Col>
-
-
             </Row>
             <div className="home-heading-container">
                 <Title level={2} className="home-title">Top 10 Cryptos In The World</Title>

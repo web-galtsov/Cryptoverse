@@ -16,7 +16,6 @@ const Navbar = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -48,7 +47,7 @@ const Navbar = () => {
                         <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                     </Menu.Item>
                     <Menu.Item icon={<MoneyCollectOutlined />} onClick={closeMobileMenu}  key="3">
-                        <Link to="/exchanges">Exchanges</Link>
+                        <Link to="/exchange">ExchangesNew</Link>
                     </Menu.Item>
                     <Menu.Item icon={<BulbOutlined />} onClick={closeMobileMenu}  key="4">
                         <Link to="/news" >News</Link>
